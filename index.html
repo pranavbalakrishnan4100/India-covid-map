@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images\favicon_io\favicon-32x32.png">
+  <title>Covid19 Map-INDIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+      <h1 id='title'>India Covid-19 Tracker</h1>
+      <input type="text" id="search-bar" placeholder="Search by state">
+      <span class="submit-button"><input id="submit" type="image" src="images/icon-arrow.svg" value="Submit"></span>
+      <div id="clickname"></div>
+      <div class="progress">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" id="vax-bar2" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" id="vax-bar1" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      </div>
+
+    <div id="mapid" class=""></div>
+
+    <div class="display-bar">
+      <div class="info" >NEW CASES:<br /><span class="returns" id="new-cases">-</span></div>
+      <div class="vl"></div>
+      <div class="info" >RECOVERED:<br /><span class="returns" id="recovered">-</span></div>
+      <div class="vl"></div>
+      <div class="info" >DEATHS:<br /><span class="returns" id="deaths">-</span></div>
+      <div class="vl"></div>
+      <div class="info" >TOTAL CONFIRMED:<br /><span class="returns" id="total">-</span></div>
+    </div>
+
+
+    <div class="attribute">
+      Made with ❤️ by <a href="https://github.com/pranavbalakrishnan4100">Pranav Balakrishnan.</a> Data sourced from <a href="https://www.covid19india.org/">covid19india.org.</a>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
